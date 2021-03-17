@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pasapalabra</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="welcomeScreen">
+      <h1>¡Bienvenido a Pasapalabra!</h1>
+      <div id="instructions">
+        <h2>
+          <i>
+            "Basado en el exitoso concurso de televisión creado por la cadena
+            británica ITV que podemos ver en España gracias a Atresmedia llega a
+            Skylab a través de uno de los challenges del precurso."</i
+          >
+        </h2>
+        <div class="align-left">
+          <p>
+            - Se mostrarán unas definiciones por pantalla de la A a la Z donde
+            el usuario tendrá que contestar la palabra a la cual se refiere la
+            definición. <br />- En caso de acertar la respuesta, la redonda de
+            la letra de referencia cambiará a color <a class="green">VERDE</a
+            ><br />- En caso de fallo, esta pasará a color
+            <a class="red">ROJO</a><br />- Finalmente, si el jugador decide
+            pasar se mantendrá el color <b>AZUL</b>.<br />
+            - El programa permite enviar la palabra pulsando la tecla
+            <b>ENTER</b> del teclado del ordenador o pulsando el botón de
+            <b>SIGUIENTE</b><br />- Para pasar a la siguiente palabra sin
+            contestar, puedes escribir <b>PASAPALABRA</b> o pulsar el botón de
+            <b>PASAPALABRA</b><br />- Para finalizar el juego antes de contestar
+            todas las palabras, debe escribir <b>END</b> o presionar el botón
+            <b>¡ME RINDO!</b>
+          </p>
+        </div>
+      </div>
+      <input
+        type="text"
+        id="nameBox"
+        name="nameBox"
+        placeholder="Introduce tu nombre"
+        required
+      />
+      <button type="button" id="startButton" name="start">JUGAR</button>
+    </div>
+    <div class="general" id="container">
+      <section class="upper">
+        <h1>Pasapalabra</h1>
+      </section>
+      <section class="mid">
+        <div class="rosco">
+          <ul>
+            <li id="a">A</li>
+            <li id="b">B</li>
+            <li id="c">C</li>
+            <li id="d">D</li>
+            <li id="e">E</li>
+            <li id="f">F</li>
+            <li id="g">G</li>
+            <li id="h">H</li>
+            <li id="i">I</li>
+            <li id="j">J</li>
+            <li id="k">K</li>
+            <li id="l">L</li>
+            <li id="m">M</li>
+            <li id="n">N</li>
+            <li id="ñ">Ñ</li>
+            <li id="o">O</li>
+            <li id="p">P</li>
+            <li id="q">Q</li>
+            <li id="r">R</li>
+            <li id="s">S</li>
+            <li id="t">T</li>
+            <li id="u">U</li>
+            <li id="v">V</li>
+            <li id="w">W</li>
+            <li id="x">X</li>
+            <li id="y">Y</li>
+            <li id="z">Z</li>
+          </ul>
+        </div>
+        <div class="question-answer-container">
+          <span id="screen">Con la A: persona que se tira muchos pedos</span>
+          <input type="text" id="answer" name="answer" />
+          <div class="buttons">
+            <button id="next" type="button">Siguiente</button>
+            <button id="pasapalabra" type="button">Pasapalabra</button>
+          </div>
+        </div>
+      </section>
+      <section class="lower">
+        <div class="circle score">
+          <p id="score">0</p>
+        </div>
+        <button id="exit" type="button">¡me rindo!</button>
+        <div class="circle time">
+          <p id="countdown"></p>
+        </div>
+      </section>
+    </div>
+    <div class="text" id="finishScreen">
+      <section class="upper">
+        <h1>Pasapalabra</h1>
+      </section>
+      <section class="message">
+        <div class="finish-text"></div>
+      </section>
+      <section class="ranking-container">
+        <h2>RANKING JUGADORES</h2>
+        <p class="player-score"></p>
+        <p class="player-score"></p>
+        <p class="player-score"></p>
+        <p class="player-score"></p>
+        <p class="player-score"></p>
+      </section>
+      <section class="buttons">
+        <button id="begin-again" type="button">Volver a jugar</button>
+      </section>
+    </div>
+    <script src="index.js" type="text/javascript" rel="javascript"></script>
+  </body>
+</html>

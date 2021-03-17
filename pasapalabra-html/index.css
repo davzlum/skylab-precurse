@@ -1,0 +1,341 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  color: white;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #2b5876 0%,
+    #4e4376 51%,
+    #2b5876 100%
+  );
+  color: white;
+}
+
+/* WELCOME SCREEN */
+#welcomeScreen {
+  padding-top: 30px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#instructions {
+  padding: 20px 80px;
+}
+
+.align-left {
+  text-align: left;
+  line-height: 30px;
+  padding: 15px 50px;
+  background-image: linear-gradient(
+    to right,
+    #232526 0%,
+    #414345 51%,
+    #232526 100%
+  );
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  text-shadow: 2px 2px 2px black;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+#nameBox {
+  padding: 10px 20px;
+  font-size: 18px;
+  opacity: 1;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#startButton:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
+.green {
+  color: greenyellow;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+/*ROSCO SCREEN*/
+.general {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+}
+
+.mid {
+  display: flex;
+  flex-direction: column;
+}
+
+.rosco {
+  padding: 1px;
+}
+
+.question-answer-container {
+  display: flex;
+  flex-direction: column;
+  padding: 140px 0;
+  width: 290px;
+  align-self: center;
+  position: absolute;
+}
+
+#screen {
+  margin-top: 0px;
+  height: 110px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#answer {
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+button#pasapalabra {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  margin-left: 2px;
+}
+
+button#pasapalabra:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+}
+
+.lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 220px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  color: black;
+}
+
+.circle p {
+  margin: 23px 0;
+}
+
+.score {
+  color: white;
+  background-image: radial-gradient(
+    circle,
+    rgb(80, 190, 85) 0%,
+    rgb(44, 167, 50) 80%
+  );
+}
+
+.time {
+  background-color: black;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+#exit {
+  height: 40px;
+  margin-top: 40px;
+  background-image: linear-gradient(
+    to right,
+    #232526 0%,
+    #414345 51%,
+    #232526 100%
+  );
+  position: absolute;
+}
+
+/*VENTANA FINAL*/
+#finishScreen {
+  display: none;
+  flex-direction: column;
+}
+
+.message {
+  padding: 50px 30px 20px;
+  font-size: 30px;
+}
+
+.finish-text {
+  padding: 10px;
+}
+
+.score-text {
+  padding: 10px;
+}
+
+.ranking-container {
+  padding: 10px;
+  margin: 0 200px;
+  border-radius: 20px;
+  height: 240px;
+  background-image: linear-gradient(
+    to right,
+    #232526 0%,
+    #414345 51%,
+    #232526 100%
+  );
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 230px;
+  margin-left: -40px;
+}
+
+li {
+  background-image: radial-gradient(circle, steelblue 0%, rgb(41, 84, 119) 90%);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  list-style: none;
+  line-height: 36px;
+  position: absolute;
+
+  box-shadow: 2px 2px 6px black;
+}
+
+#a {
+  transform: rotate(270deg) translate(200px) rotate(-270deg);
+}
+#b {
+  transform: rotate(283.33deg) translate(200px) rotate(-283.33deg);
+}
+#c {
+  transform: rotate(296.66deg) translate(200px) rotate(-296.66deg);
+}
+#d {
+  transform: rotate(309.99deg) translate(200px) rotate(-309.99deg);
+}
+#e {
+  transform: rotate(323.32deg) translate(200px) rotate(-323.32deg);
+}
+#f {
+  transform: rotate(336.35deg) translate(200px) rotate(-336.35deg);
+}
+#g {
+  transform: rotate(349.98deg) translate(200px) rotate(-349.98deg);
+}
+#h {
+  transform: rotate(363.31deg) translate(200px) rotate(-363.31deg);
+}
+#i {
+  transform: rotate(376.64deg) translate(200px) rotate(-376.64deg);
+}
+#j {
+  transform: rotate(389.97deg) translate(200px) rotate(-389.97deg);
+}
+#k {
+  transform: rotate(403.03deg) translate(200px) rotate(-403.03deg);
+}
+#l {
+  transform: rotate(416.63deg) translate(200px) rotate(-416.63deg);
+}
+#m {
+  transform: rotate(429.96deg) translate(200px) rotate(-429.96deg);
+}
+#n {
+  transform: rotate(443.29deg) translate(200px) rotate(-443.29deg);
+}
+#ñ {
+  transform: rotate(456.62deg) translate(200px) rotate(-456.62deg);
+}
+#o {
+  transform: rotate(469.95deg) translate(200px) rotate(-469.95deg);
+}
+#p {
+  transform: rotate(483.28deg) translate(200px) rotate(-483.28deg);
+}
+#q {
+  transform: rotate(496.61deg) translate(200px) rotate(-496.61deg);
+}
+#r {
+  transform: rotate(509.94deg) translate(200px) rotate(-509.94deg);
+}
+#s {
+  transform: rotate(523.27deg) translate(200px) rotate(-523.27deg);
+}
+#t {
+  transform: rotate(536.6deg) translate(200px) rotate(-536.6deg);
+}
+#u {
+  transform: rotate(549.93deg) translate(200px) rotate(-549.93deg);
+}
+#v {
+  transform: rotate(563.26deg) translate(200px) rotate(-563.26deg);
+}
+#w {
+  transform: rotate(576.59deg) translate(200px) rotate(-576.59deg);
+}
+#x {
+  transform: rotate(589.92deg) translate(200px) rotate(-589.92deg);
+}
+#y {
+  transform: rotate(603.25deg) translate(200px) rotate(-603.25deg);
+}
+#z {
+  transform: rotate(616.58deg) translate(200px) rotate(-616.58deg);
+}
