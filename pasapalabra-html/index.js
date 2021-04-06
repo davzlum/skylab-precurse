@@ -115,7 +115,7 @@ function randomNumb() {
     roscoNumber = Math.floor(Math.random()*3);
 }
 
-//Resetear todo y empezar de nuevo
+//Resetear y empezar de nuevo
 function init() {
     for(let i=0;i<questions[roscoNumber].length;i++){
         questions[roscoNumber][i].status = 0;
@@ -140,7 +140,6 @@ startButton.addEventListener('click', function startGame(){
     randomNumb();
     if(playerName === ""){
         alert("Por favor, introduce un nombre");
-        return;
     } else {
         //Ocultar ventana inicio y mostrar rosco
         document.getElementById("welcomeScreen").style.display = "none";
@@ -156,7 +155,7 @@ startButton.addEventListener('click', function startGame(){
 function countdown(){
     if(totalTime < 0){
         finishGame("timeOver");
-        return;
+
     } else {
         timer = setTimeout('countdown()', 1000);
         document.getElementById("countdown").innerHTML = totalTime--;
@@ -173,7 +172,7 @@ function next(){
     if(questions[roscoNumber][num].status === 0){
         checkQuestion();
         num++;
-        if(checkNumber()){ return }; //Check es finish partida
+        if(checkNumber()){ return } //Check es finish partida
         showQuestion();
     
     }
@@ -186,7 +185,7 @@ pasapalabraButton.addEventListener('click', pasapalabra);
 function pasapalabra(){
     document.getElementById(questions[roscoNumber][num].letter).style.backgroundImage = blue;
     num++;
-    if(checkNumber()){ return };
+    if(checkNumber()){ return }
     questionBox.innerHTML = questions[roscoNumber][num].question;
     document.getElementById(questions[roscoNumber][num].letter).style.backgroundImage = darkgray;
     
@@ -200,7 +199,6 @@ exit.addEventListener('click', finishGame);
 answerBox.addEventListener('keypress', keyEvent);
 
 function keyEvent(e){
-    var e = e;
     var tecla = e.keyCode;
     if(tecla === 13){
         next();

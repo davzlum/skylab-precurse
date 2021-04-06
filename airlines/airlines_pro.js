@@ -16,7 +16,7 @@ function enterFlight (departure,arrival,price,scale) {
     console.log(message);
 
     flightsList.push({Id,departure,arrival,price,scale,message});   
-    return;
+
 }
 
 
@@ -42,7 +42,7 @@ function lastsFlights () {
     for (let i=flightsList.length-5;i<flightsList.length;i++){
         console.log(flightsList[i].arrival);
     }
-    return;
+
 }
 
 //Función coste medio de los vuelos
@@ -54,7 +54,7 @@ function averagePrices() {
     }
     average = suma/flightsList.length;
     console.log("El coste medio de los vuelos es de: " + average + "€.");
-    return;
+
 }
 
 //Función vuelos con escala
@@ -66,7 +66,7 @@ function flightsWithScale() {
         }
     }
     console.log("Hay " + countWith + " vuelos con escalas.");
-    return;
+
 }
 
 //------------------------------------------------------------------
@@ -77,7 +77,7 @@ function whoAreYou () {
     
     if (typePerson === null) {
         alert("¡Hasta la vista!");
-        return;
+
     } else if (isNaN(typePerson)) {
         if (typePerson.toUpperCase() === "ADMIN"){
             return admin ();
@@ -98,7 +98,7 @@ function admin() {
     const choose = prompt("Hola Administrador ¿Que deseas hacer?\n" + "\n - Añadir vuelos (escribe ADD)" + "\n - Eliminar vuelos (escribe DELETE)");
     if (choose === null) {
         alert("¡Hasta la vista!");
-        return;
+
     } else if (choose.toUpperCase() === "ADD") {
         if (flightsList.length > 15) {
             alert("Lo siento, has llegado al máximo permitido, elige otra opción");
@@ -159,7 +159,7 @@ function continueNewFlights () {
     const continueNew = prompt("¿Quieres seguir creando nuevos vuelos? Y/N");
     if (continueNew === null) {
         alert("¡Hasta la vista!");
-        return;
+
     } else if (continueNew.toUpperCase() === "Y") {
         if (flightsList.length < 15){
             return newFlights();
@@ -217,7 +217,7 @@ function user() {
     const searchPrice = prompt("Teclea el precio que quieres buscar");
     if (searchPrice === null){
         alert("¡Hasta la vista!");
-        return;
+        
     } else if (isNaN(searchPrice)){
         alert("Solo puedes introducir números");
         return user();
@@ -241,7 +241,6 @@ function user() {
                         return user();
                     }
                     return buyTicket();
-                    break;
                 case "-":
                     console.log("Estos son los vuelos con un precio inferior a " + searchPrice + "€");
                     for(let i=0;i<flightsList.length;i++){
@@ -255,7 +254,6 @@ function user() {
                         return user();
                     }
                     return buyTicket();
-                    break;
                 case "=": 
                     console.log("Estos son los vuelos con un precio igual a " + searchPrice + "€");
                     for(let i=0;i<flightsList.length;i++){
@@ -269,7 +267,6 @@ function user() {
                         return user();
                     }
                     return buyTicket();
-                    break;
                 default: 
                     alert("No has introducido un valor correcto");
                     return user();

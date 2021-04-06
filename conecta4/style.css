@@ -6,13 +6,20 @@ body {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  color: black;
+  color: white;
+  background-image: linear-gradient(
+    110.3deg,
+    rgba(73, 93, 109, 1) 4.3%,
+    rgba(49, 55, 82, 1) 96.7%
+  );
 }
 
 h1 {
   text-transform: uppercase;
   font-size: 40px;
   padding: 20px 0;
+  color: white;
+  font-weight: bold;
 }
 
 .tablero-player-container {
@@ -24,12 +31,14 @@ h1 {
 .tablero {
   border: 2px solid gray;
   margin: 0;
+  min-width: 504px;
 }
 
 .column {
   border: 1px solid gray;
   padding: 0 10px;
   outline: none;
+  background-color: rgb(150, 150, 150);
 }
 
 .player-red-container {
@@ -42,10 +51,10 @@ h1 {
 }
 
 .player-red {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: red;
+  background-image: radial-gradient(circle, rgb(255, 80, 80) 0%, red 90%);
 }
 
 .player-blue-container {
@@ -57,10 +66,11 @@ h1 {
   align-items: center;
 }
 .player-blue {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: blue;
+  background-image: radial-gradient(circle, rgb(61, 61, 255) 0%, blue 90%);
+  opacity: 0;
 }
 
 p {
@@ -85,9 +95,46 @@ p {
   color: red;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .winner-text {
   font-size: 20px;
   padding: 30px;
   text-transform: uppercase;
   height: 25px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.reset {
+  padding: 10px;
+  border-style: none;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  display: block;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  text-decoration: none;
+  outline: none;
+}
+
+.reset:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }

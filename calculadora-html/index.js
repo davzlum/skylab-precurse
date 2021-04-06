@@ -165,7 +165,7 @@ function result() {
         number=1;
     } else if (checkDiv){
         screen.innerHTML = acumulator / parseFloat(number);
-        number=1; //no está bien del todo
+        number=1;
     }
     acumulatorArray.push(acumulator);
     acumulator=parseFloat(screen.innerHTML);
@@ -177,8 +177,7 @@ function reset(){
     acumulator = 0;
     number = 0; 
     p_operation=true;
-    let checkSuma=false;
-    let checkResta=false;
+    checkSuma=false;
     acumulatorArray = [];
     coma = 0;
 }

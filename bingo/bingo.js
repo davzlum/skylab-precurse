@@ -36,7 +36,6 @@ function bingo () {
         for(let i=0;i<3;i++){
             if(matchLines[i] === false) {
                 let lineMatched = true;
-                let condition = false;
                 for(let j=0;j<bingoCard[i].length;j++){
                     if (bingoCard[i][j].matched === false){
                         lineMatched = false;
@@ -59,10 +58,9 @@ function bingo () {
     //Función para introducir nombre del jugador (propiedades nombre y puntuación)
    function writeYourName () {
         name = prompt("Bienvenido, introduce tu nombre");
-        name = capitalLetter(name);
+        name = capitalLetter();
         if(name === null){
             alert("¡Hasta la vista!")
-            return;
         } else if (isNaN(name)) {
             console.log("Hola " + name + "!\nAquí tienes tu cartón para jugar al bingo!");
             let generatePlayer = {
@@ -84,7 +82,6 @@ function bingo () {
        const changeC = prompt("¿Quieres este cartón y empezar a jugar? y/n");
        if(changeC === null) {
            alert("¡Hasta la vista!");
-           return;
        } else if(changeC.toUpperCase() === "Y"){
             if (confirm("SISTEMA DE PUNTUACIÓN: \n\nVas a empezar con 9900pts. pero por cada turno que necesites perderás 100pts. Así que cuantos más turnos necesites menos puntos tendrás. ¿Estás preparado? \n\n¡Adelante y mucha suerte!")) {
                 newTurn();
@@ -121,7 +118,7 @@ function bingo () {
 
     //Función primera letra en mayúscula
 
-    function capitalLetter(name){
+    function capitalLetter(){
         return name.charAt(0).toUpperCase() + name.slice(1);
     }
 
@@ -225,7 +222,6 @@ function bingo () {
             askTurn();
         } else {
             alert("¡Hasta la vista!");
-            return;
         }
     }  
     
@@ -235,7 +231,6 @@ function bingo () {
             writeYourName();
         } else {
             alert("¡Hasta la vista!");
-            return;
         }
     }
     //Función para el sistema de puntuación

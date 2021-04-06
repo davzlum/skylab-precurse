@@ -103,7 +103,7 @@ function startGame (){
     name = prompt("¡BIENVENIDO A PASAPALABRAS!\n\nPor favor, introduce tu nombre");
     if(name === null) {
         alert("¡Hasta la vista!");
-        return;
+
     } else if (isNaN(name)){
         let generatePlayer = {
             name: name,
@@ -188,7 +188,6 @@ function scoreRanking() {
         position++;
         console.log(position + "º. " + firstLetterUp(players[i].name) + ": " + players[i].score + " aciertos")
     }
-    return;
 }
 
 startGame();
